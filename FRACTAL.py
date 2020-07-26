@@ -1,23 +1,20 @@
-from tkinter import *
-from random import *
+from tkinter import * 
+from time import sleep
 
 tk = Tk()
 tk.overrideredirect(True)
-w, h = tk.winfo_screenwidth(), tk.winfo_screenheight()
-# w, h = 600, 600
-tk.geometry("%dx%d+0+0" % (w, h))
-canvas = Canvas(tk, bg = 'black', width = w, height = h)
+canvas = Canvas(tk, bg = 'black', width = 600, height = 600)
 canvas.pack()
 
-colors = ['white', 'red', 'green', 'yellow', 'blue', 'pink', 'orange', 'cyan']
+def create_circle(x, y, r):
+    if r > .1:
+        r = int(round(r))
+        canvas.create_oval(x - r, y - r, x + r, y + r, outline = 'white')
+        tk.update()
+        create_circle(x - r, y, r / 2)
+        create_circle(x + r, y, r / 2)
+        create_circle(x, y - r, r / 2)
+        # sleep(.01)
 
-def draw_circle(x, y, r):
-    if r > 1:
-        canvas.create_oval(x - r, y - r, x + r, y + r, outline = choice(colors))
-        draw_circle(x + r, y, r * .5)
-        draw_circle(x - r, y, r * .5)
-        draw_circle(x, y + r, r * .5)
-        # draw_circle(x, y - r, r * .5)
-
-draw_circle(w / 2, 0, 300)
+create_circle(300, 600, 300)
 tk.mainloop()
