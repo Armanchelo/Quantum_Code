@@ -1,2 +1,2 @@
 # Quantum_Code
- "everybody should know to program because it teach to think"
+"you can shine no matter what you´re made of"
