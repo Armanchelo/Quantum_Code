@@ -95,7 +95,7 @@ def find(path, show = False):
     if show == True:
         tk.mainloop()
 
-mapa, path = find('C:\\Users\\Usuario\\Python\\Maze8.png', show = True)
+mapa, path = find('C:\\Users\\Usuario\\Python\\Maze6.png', show = True)
 if path != None:
     x, y = mapa.size
     width, height = min(600 / x, 600 / y), min(600 / x, 600 / y)
