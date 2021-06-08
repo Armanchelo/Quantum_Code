@@ -1,0 +1,1 @@
+google:https://www.google.com/search?q=,youtube:https://www.youtube.com/results?search_query=,mercado libre:https://listado.mercadolibre.com.mx/,wikipedia:https://es.wikipedia.org/wiki/,google academic:https://scholar.google.com.mx/scholar?hl=es&as_sdt=0%2C5&q=,amazon:https://www.amazon.com.mx/s?k=
